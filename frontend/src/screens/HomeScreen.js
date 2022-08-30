@@ -40,23 +40,19 @@ function HomeScreen() {
   }, []);
   return (
     <div>
-      <header></header>
-      <main>
-        <h1>Featured Products</h1>
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>{error}</div>
-        ) : (
-          <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
-              </Col>
-            ))}
-          </Row>
-        )}
-      </main>
+      {loading ? (
+        <div>Loading...</div>
+      ) : error ? (
+        <div>{error}</div>
+      ) : (
+        <Row>
+          {products.map((product) => (
+            <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+              <Product product={product}></Product>
+            </Col>
+          ))}
+        </Row>
+      )}
     </div>
   );
 }

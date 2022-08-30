@@ -5,6 +5,7 @@ import ProductScreen from './screens/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
+import SearchBox from './components/SearchBox';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
               <LinkContainer to="/">
                 <Navbar.Brand>NFTword</Navbar.Brand>
               </LinkContainer>
+              <Navbar.Collapse id="basic-navbar-nav">
+                <SearchBox />
+              </Navbar.Collapse>
             </Container>
           </Navbar>
         </header>
