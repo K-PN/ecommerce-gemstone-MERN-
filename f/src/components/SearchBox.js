@@ -9,7 +9,7 @@ export default function SearchBox() {
           type="text"
           name="q"
           id="q"
-          placeholder="search here"
+          placeholder="Search here"
           aria-label="Search Products"
           aria-describedby="button-search"
         ></FormControl>

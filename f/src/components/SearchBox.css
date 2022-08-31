@@ -2,23 +2,21 @@
   color: #888;
 }
 
-form {
-  justify-content: center;
-  margin: 0 auto;
+.input-group {
+  flex-wrap: inherit;
   border: 1px solid #eee;
 }
 
-.input-group {
-  flex-wrap: inherit;
-}
-
 .input-group .form-control {
-  width: 255px;
   height: 46px;
   border: none;
   border-radius: 0;
   padding: 7px 20px;
   box-shadow: none;
+}
+
+.input-group .form-control:focus {
+  z-index: 0;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -29,7 +27,6 @@ form {
   color: white;
   background-color: black;
   border-radius: 0;
-  margin-left: 0;
 }
 
 #button-search:focus {
