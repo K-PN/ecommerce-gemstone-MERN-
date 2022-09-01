@@ -6,10 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+main {
+  background-color: #f7f7f7;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn {
+  background-image: url('./components/Capture.png');
 }
 
 .card {
@@ -87,14 +94,4 @@ code {
   line-height: 18px;
   color: #202020;
   margin-bottom: 0;
-}
-
-.btn {
-  margin-left: 3px;
-}
-
-.btn-primary,
-.btn-outline-primary {
-  background-color: #f0c040;
-  color: #000000;
 }

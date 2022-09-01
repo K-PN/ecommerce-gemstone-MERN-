@@ -1,14 +1,10 @@
-.btn {
-  color: #888;
-}
-
 .input-group {
   flex-wrap: inherit;
   border: 1px solid #eee;
 }
 
 .input-group .form-control {
-  height: 46px;
+  height: 42px;
   border: none;
   border-radius: 0;
   padding: 7px 20px;
@@ -24,8 +20,9 @@
 }
 
 #button-search {
+  width: 60px;
   color: white;
-  background-color: black;
+  background-color: rgb(34, 32, 32);
   border-radius: 0;
 }
 
