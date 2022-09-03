@@ -1,26 +1,18 @@
-import {
-  Container,
-  Row,
-  Navbar,
-  Nav,
-  Image,
-  Dropdown,
-  DropdownButton,
-  MenuItem,
-} from 'react-bootstrap';
+import { Container, Row, Navbar, Nav, Image, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Cart, Person, List } from 'react-bootstrap-icons';
-import React, { useRef } from 'react';
 import SearchBox from './SearchBox';
 import './Header.css';
-import { useDetectOutsideClick } from './useDetectOutsideClick';
 
 export default function Headers() {
-  const dropdownRef = useRef(null);
-  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
-  const onClick = () => setIsActive(!isActive);
   return (
     <header>
+      <Navbar className="top-bar">
+        <Container>
+          <Row className="col top-bar-left"></Row>
+          <Row className="col top-bar-right"></Row>
+        </Container>
+      </Navbar>
       <Container>
         <Row>
           <Nav className="col">
@@ -56,7 +48,7 @@ export default function Headers() {
       <Navbar className="header-nav-container">
         <Container>
           <Dropdown>
-            <Dropdown.Toggle variant="dark" size="lg" onClick={onClick}>
+            <Dropdown.Toggle variant="dark" size="lg">
               <List
                 style={{
                   marginBottom: '5px',
@@ -67,10 +59,7 @@ export default function Headers() {
               />
               All Categories
             </Dropdown.Toggle>
-            <Dropdown.Menu
-              ref={dropdownRef}
-              className={`${isActive ? 'active' : 'inactive'}`}
-            >
+            <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
