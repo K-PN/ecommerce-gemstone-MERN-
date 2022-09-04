@@ -15,10 +15,6 @@ code {
     monospace;
 }
 
-.btn {
-  background-image: url('./components/Capture.png');
-}
-
 .card {
   margin: 0;
   position: relative;

@@ -1,4 +1,12 @@
-import { Container, Row, Navbar, Nav, Image, Dropdown } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Navbar,
+  Nav,
+  Image,
+  Dropdown,
+  Col,
+} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Cart, Person, List } from 'react-bootstrap-icons';
 import SearchBox from './SearchBox';
@@ -7,16 +15,11 @@ import './Header.css';
 export default function Headers() {
   return (
     <header>
-      <Navbar className="top-bar">
-        <Container>
-          <Row className="col top-bar-left"></Row>
-          <Row className="col top-bar-right"></Row>
-        </Container>
-      </Navbar>
       <Container>
         <Row>
-          <Nav className="col">
-            <LinkContainer to="/">
+          <Nav className="col"></Nav>
+          <Row className="col-6">
+            <LinkContainer to="/" className="logo">
               <Navbar.Brand>
                 <Image
                   src="https://opensea.io/static/images/logos/opensea.svg/"
@@ -25,9 +28,15 @@ export default function Headers() {
                 NFTWorld
               </Navbar.Brand>
             </LinkContainer>
-          </Nav>
-          <Row className="col-6">
-            <SearchBox />
+            <Nav className="justify-content-around">
+              <SearchBox />
+              <Nav className="col-2">
+                <SearchBox />
+              </Nav>
+              <Nav className="col-2">
+                <SearchBox />
+              </Nav>
+            </Nav>
           </Row>
           <Row className="w-auto col">
             <Nav className="justify-content-end">
