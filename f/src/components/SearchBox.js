@@ -1,4 +1,5 @@
 import { Form, Button, InputGroup, FormControl, Nav } from 'react-bootstrap';
+import { Cart } from 'react-bootstrap-icons';
 import './SearchBox.css';
 import React, { useState } from 'react';
 

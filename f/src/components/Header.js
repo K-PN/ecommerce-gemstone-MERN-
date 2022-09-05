@@ -1,15 +1,9 @@
-import {
-  Container,
-  Row,
-  Navbar,
-  Nav,
-  Image,
-  Dropdown,
-  Col,
-} from 'react-bootstrap';
+import { Container, Row, Navbar, Nav, Image, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Cart, Person, List } from 'react-bootstrap-icons';
+import { Person, List } from 'react-bootstrap-icons';
+import Category from './Category';
 import SearchBox from './SearchBox';
+import Cart from './Cart';
 import './Header.css';
 
 export default function Headers() {
@@ -18,7 +12,7 @@ export default function Headers() {
       <Container>
         <Row>
           <Nav className="col"></Nav>
-          <Row className="col-6">
+          <Row className="col-3">
             <LinkContainer to="/" className="logo">
               <Navbar.Brand>
                 <Image
@@ -29,22 +23,20 @@ export default function Headers() {
               </Navbar.Brand>
             </LinkContainer>
             <Nav className="justify-content-around">
-              <SearchBox />
+              <Nav className="col-2">
+                <Category />
+              </Nav>
               <Nav className="col-2">
                 <SearchBox />
               </Nav>
               <Nav className="col-2">
-                <SearchBox />
+                <Cart />
               </Nav>
             </Nav>
           </Row>
           <Row className="w-auto col">
             <Nav className="justify-content-end">
-              <Nav.Item className="nft-mini-cart">
-                <Nav.Link to="/">
-                  <Cart size={28} color="black" />
-                </Nav.Link>
-              </Nav.Item>
+              <Nav.Item className="nft-mini-cart"></Nav.Item>
               <Nav.Item className="nft-account">
                 <Nav.Link to="/">
                   <Person size={33} color="black" />

@@ -1,0 +1,95 @@
+.menu-hamburger {
+  padding: 30px;
+  position: relative;
+  background: white;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 10px white,
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 10px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+}
+.icon-left {
+  content: '';
+  background: #c3c2c7;
+  width: 15px;
+  height: 5px;
+  left: -5px;
+  position: relative;
+  transition: 0.2s ease;
+  z-index: 1;
+}
+.icon-left:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background-color: #c3c2c7;
+  content: '';
+  top: -13px;
+}
+.icon-left:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background-color: #c3c2c7;
+  content: '';
+  top: 13px;
+}
+.icon-left:hover {
+  cursor: pointer;
+}
+.icon-right {
+  content: '';
+  background: #c3c2c7;
+  width: 15px;
+  height: 5px;
+  position: relative;
+  top: -5px;
+  left: 10px;
+  transition: 0.2s ease;
+  z-index: 1;
+}
+.icon-right:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background-color: #c3c2c7;
+  content: '';
+  top: -13px;
+}
+.icon-right:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background-color: #c3c2c7;
+  content: '';
+  top: 13px;
+}
+.menu-hamburger.open .icon-left {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.menu-hamburger.open .icon-left:before {
+  transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+}
+.menu-hamburger.open .icon-left:after {
+  transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+}
+.menu-hamburger.open .icon-right {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.menu-hamburger.open .icon-right:before {
+  transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+}
+.menu-hamburger.open .icon-right:after {
+  transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+}
+.menu-hamburger:hover {
+  cursor: pointer;
+}
