@@ -1,3 +1,79 @@
+.search-button {
+  padding: 30px;
+  position: relative;
+  background: white;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 7px 7px 15px rgb(0 0 0 / 15%), -7px -7px 20px #f9f9f9,
+    inset 0px 0px 4px rgb(255 255 255 / 20%), inset 7px 7px 15px rgb(0 0 0 / 0%),
+    inset -7px -7px 20px rgb(0 0 0 / 0%), 0px 0px 4px rgb(0 0 0 / 0%);
+}
+.search-button::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  right: 35%;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+  transform-origin: right top;
+}
+
+.search-button::after {
+  content: '';
+  position: absolute;
+  width: 35%;
+  right: 28%;
+  bottom: 22%;
+  height: 2px;
+  background-color: black;
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+
+.search-icon {
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 22%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: double;
+  border-color: black;
+}
+
+.search-button.active::before,
+.search-button.active::after {
+  width: 40%;
+}
+
+.search-button.active::after {
+  right: 35%;
+  bottom: 35%;
+}
+
+.search-button.active .search-icon {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+}
+
+.search-button::before,
+.search-button::after,
+.search-button .search-icon {
+  transition: all 0.3s ease-in-out;
+}
+.search-button.open {
+  opacity: 0.9;
+}
+.search-button.open .search-form {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .input-group {
   flex-wrap: inherit;
   border: 1px solid #eee;
@@ -82,51 +158,6 @@
 #button-search:active::after {
   transition: 0s;
   transform: translate(0, 5%);
-}
-
-.search-menu {
-  padding: 30px;
-  position: relative;
-  background: white;
-  border-radius: 100%;
-  cursor: pointer;
-  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white,
-    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
-    inset 7px 7px 15px rgba(55, 84, 170, 0),
-    inset -7px -7px 20px rgba(255, 255, 255, 0),
-    0px 0px 4px rgba(255, 255, 255, 0);
-}
-.search-menu::before,
-.search-menu::after {
-  content: '';
-  background: #c3c2c7;
-  border-radius: 5px;
-  width: 30px;
-  height: 5px;
-  position: absolute;
-  left: 16px;
-  top: 27px;
-  transition: 0.2s ease;
-  z-index: 1;
-}
-.search-menu::before {
-  transform: rotate(0deg);
-}
-.search-menu::after {
-  transform: rotate(-90deg);
-}
-.search-menu.open {
-  opacity: 0.9;
-}
-.search-menu.open::before {
-  transform: rotate(45deg);
-}
-.search-menu.open::after {
-  transform: rotate(-45deg);
-}
-.search-menu.open .search-form {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .search-form {

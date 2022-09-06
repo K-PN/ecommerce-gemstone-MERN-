@@ -1,5 +1,4 @@
 import { Form, Button, InputGroup, FormControl, Nav } from 'react-bootstrap';
-import { Cart } from 'react-bootstrap-icons';
 import './SearchBox.css';
 import React, { useState } from 'react';
 
@@ -10,9 +9,10 @@ export default function SearchBox() {
   };
   return (
     <div
-      className={`search-menu ${isActive ? 'open' : ''}`}
+      className={`search-button ${isActive ? 'open' + ' ' + 'active' : ''}`}
       onClick={toggleClass}
     >
+      <div class="search-icon"></div>
       <Form className="d-flex me-auto search-form">
         <InputGroup>
           <FormControl

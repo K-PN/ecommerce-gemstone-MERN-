@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Person, List } from 'react-bootstrap-icons';
 import Category from './Category';
 import SearchBox from './SearchBox';
-import Cart from './Cart';
+import Cartmini from './Cartmini';
 import './Header.css';
 
 export default function Headers() {
@@ -30,7 +30,7 @@ export default function Headers() {
                 <SearchBox />
               </Nav>
               <Nav className="col-2">
-                <Cart />
+                <Cartmini />
               </Nav>
             </Nav>
           </Row>
