@@ -1,13 +1,24 @@
 .search-button {
-  padding: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 40% 40%;
   position: relative;
   background: white;
   border-radius: 100%;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  box-shadow: 7px 7px 15px rgb(0 0 0 / 15%), -7px -7px 20px #f9f9f9,
-    inset 0px 0px 4px rgb(255 255 255 / 20%), inset 7px 7px 15px rgb(0 0 0 / 0%),
-    inset -7px -7px 20px rgb(0 0 0 / 0%), 0px 0px 4px rgb(0 0 0 / 0%);
+  background-image: linear-gradient(
+    45deg,
+    #131212 0%,
+    #b3b3b3 61%,
+    #131212 100%
+  );
+  transition: 0.5s;
+  background-size: 400% auto;
+}
+
+.search-button:hover {
+  background-position: right center;
 }
 .search-button::before {
   content: '';
@@ -15,7 +26,7 @@
   top: 35%;
   right: 35%;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transform: rotate(-45deg);
   transform-origin: right top;
 }
@@ -27,7 +38,7 @@
   right: 28%;
   bottom: 22%;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transform: rotate(45deg);
   transform-origin: right bottom;
 }
@@ -42,7 +53,7 @@
   border-radius: 50%;
   border-width: 4px;
   border-style: double;
-  border-color: black;
+  border-color: white;
 }
 
 .search-button.active::before,

@@ -1,5 +1,5 @@
 .container {
-  padding: 50px 0;
+  padding-bottom: 20px;
 }
 
 .top-bar {
@@ -15,8 +15,27 @@
   color: white;
 }
 
+.address {
+  top: 0;
+  font-size: 15px;
+  justify-content: center;
+}
+
 .logo {
   padding: 10px;
+  padding-bottom: 30px;
+  justify-content: center;
+  display: flex;
+}
+
+.header-widget {
+  justify-content: center;
+}
+
+.button-widget {
+  width: 45px;
+  height: 45px;
+  margin: 0 18px;
 }
 
 .header-nav-container {

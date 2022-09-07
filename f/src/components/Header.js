@@ -11,25 +11,28 @@ export default function Headers() {
     <header>
       <Container>
         <Row>
-          <Nav className="col"></Nav>
-          <Row className="col-3">
+          <Nav className='col address'>
+            <Navbar.Text>
+              +9-123-234-567
+            </Navbar.Text>
+          </Nav>
+          <Row className="col">
             <LinkContainer to="/" className="logo">
               <Navbar.Brand>
                 <Image
-                  src="https://opensea.io/static/images/logos/opensea.svg/"
-                  width="40"
+                  src="./logo.png"
+                  width={240}
                 />
-                NFTWorld
               </Navbar.Brand>
             </LinkContainer>
-            <Nav className="justify-content-around">
-              <Nav className="col-2">
+            <Nav className='header-widget'>
+              <Nav className="col-2 button-widget">
                 <Category />
               </Nav>
-              <Nav className="col-2">
+              <Nav className="col-2 button-widget">
                 <SearchBox />
               </Nav>
-              <Nav className="col-2">
+              <Nav className="col-2 button-widget">
                 <Cartmini />
               </Nav>
             </Nav>

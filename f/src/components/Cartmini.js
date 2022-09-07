@@ -1,4 +1,4 @@
-import { Cart } from 'react-bootstrap-icons';
+
 import './Cartmini.css';
 import React, { useState } from 'react';
 

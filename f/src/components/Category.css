@@ -1,16 +1,28 @@
 .menu-hamburger {
-  padding: 25px;
+  width: 100%;
+  height: 100%;
+  padding: 40% 40%;
   position: relative;
   background: white;
   border-radius: 100%;
   cursor: pointer;
-  box-shadow: 7px 7px 15px rgb(0 0 0 / 15%), -7px -7px 20px #f9f9f9,
-    inset 0px 0px 4px rgb(255 255 255 / 20%), inset 7px 7px 15px rgb(0 0 0 / 0%),
-    inset -7px -7px 20px rgb(0 0 0 / 0%), 0px 0px 4px rgb(0 0 0 / 0%);
+  background-image: linear-gradient(
+    45deg,
+    #131212 0%,
+    #b3b3b3 61%,
+    #131212 100%
+  );
+  transition: 0.5s;
+  background-size: 400% auto;
 }
+
+.menu-hamburger:hover {
+  background-position: right center;
+}
+
 .icon-left {
   content: '';
-  background: black;
+  background: white;
   width: 10px;
   height: 2px;
   left: -5px;
@@ -21,7 +33,7 @@
 }
 .icon-left:before {
   content: '';
-  background-color: black;
+  background-color: white;
   transition-duration: 0.5s;
   position: absolute;
   width: 10px;
@@ -31,7 +43,7 @@
 }
 .icon-left:after {
   content: '';
-  background-color: black;
+  background-color: white;
   transition-duration: 0.5s;
   position: absolute;
   width: 10px;
@@ -44,7 +56,7 @@
 }
 .icon-right {
   content: '';
-  background: black;
+  background: white;
   width: 10px;
   height: 2px;
   position: relative;
@@ -58,7 +70,7 @@
   position: absolute;
   width: 10px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   content: '';
   top: -10px;
 }
@@ -67,7 +79,7 @@
   position: absolute;
   width: 10px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   content: '';
   top: 10px;
 }
