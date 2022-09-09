@@ -23,6 +23,10 @@ code {
   transition: all 0.3s;
 }
 
+.card:hover .rating span i {
+  background-position: right center;
+}
+
 .card:hover {
   box-shadow: 0 5px 20px #0000001a;
   transform: translateY(-4px);
@@ -81,7 +85,11 @@ code {
 }
 
 .rating span i {
-  color: #a07936;
+  background: linear-gradient(45deg, #131212 0%, #b3b3b3 71%, #131212 100%);
+  background-clip: text;
+  color: transparent;
+  transition: 0.5s;
+  background-size: 1000% auto;
 }
 
 .card-text {

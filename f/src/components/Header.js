@@ -1,6 +1,6 @@
 import { Container, Row, Navbar, Nav, Image, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Person, List } from 'react-bootstrap-icons';
+import { TelephoneFill, Person, List } from 'react-bootstrap-icons';
 import Category from './Category';
 import SearchBox from './SearchBox';
 import Cartmini from './Cartmini';
@@ -8,11 +8,16 @@ import './Header.css';
 
 export default function Headers() {
   return (
-    <header>
+    <header style={{
+      backgroundImage: `url("//cdn.shopify.com/s/files/1/0908/7252/t/4/assets/slide-image-1.jpg?v=70396289972732491791627441413")`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }}>
       <Container>
         <Row>
           <Nav className='col address'>
             <Navbar.Text>
+              <TelephoneFill size={25} />
               +9-123-234-567
             </Navbar.Text>
           </Nav>
@@ -49,28 +54,7 @@ export default function Headers() {
           </Row>
         </Row>
       </Container>
-      <Navbar className="header-nav-container">
-        <Container>
-          <Dropdown>
-            <Dropdown.Toggle variant="dark" size="lg">
-              <List
-                style={{
-                  marginBottom: '5px',
-                  marginRight: '15px',
-                  color: 'white',
-                  fontSize: '1.5em',
-                }}
-              />
-              All Categories
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Container>
-      </Navbar>
+
     </header>
   );
 }
