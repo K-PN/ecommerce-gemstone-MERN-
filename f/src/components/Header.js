@@ -1,18 +1,15 @@
-import { Container, Row, Navbar, Nav, Image, Dropdown } from 'react-bootstrap';
+import { Container, Row, Navbar, Nav, Image, Carousel } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { TelephoneFill, Person, List } from 'react-bootstrap-icons';
 import Category from './Category';
 import SearchBox from './SearchBox';
 import Cartmini from './Cartmini';
+import Slider from './Slider';
 import './Header.css';
 
 export default function Headers() {
   return (
-    <header style={{
-      backgroundImage: `url("//cdn.shopify.com/s/files/1/0908/7252/t/4/assets/slide-image-1.jpg?v=70396289972732491791627441413")`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover'
-    }}>
+    <header>
       <Container>
         <Row>
           <Nav className='col address'>
@@ -54,7 +51,7 @@ export default function Headers() {
           </Row>
         </Row>
       </Container>
-
+      <Slider />
     </header>
   );
 }

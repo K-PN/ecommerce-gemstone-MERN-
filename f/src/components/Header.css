@@ -1,5 +1,7 @@
 .container {
   padding-bottom: 20px;
+  position: absolute;
+  z-index: 1090;
 }
 
 .top-bar {
