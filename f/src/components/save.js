@@ -11,11 +11,6 @@
   </div>
   <div class="social">
     <a href="#">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-  <div class="social">
-    <a href="#">
       <i class="fab fa-youtube"></i>
     </a>
   </div>
